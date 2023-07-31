@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+    body, *{
+        margin: 0;
+        font-family: 'arial',sans-serif;
+    }
+    body{
+        background: white;
+    }
+    .container{
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .cont{
+        display: flex;
+        justify-content: center;
+    }
+    .header{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(225, 225, 225,0.5);
+    }
+    .information{
+        display: flex;
+        flex-direction: column;
+        margin-right: 4%;
+        margin-left: auto;
+    }
+    .first{
+        color: rgb(141, 0, 0);
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .hr{
+        height: 4px;
+    }
+    .second{
+        font-size: 41px;
+        font-weight: 700;
+        opacity: 0.8;
+    }
+    .third{
+        font-size: 15px;
+        font-weight: 700;
+        opacity: 0.6;
+    }
+    .navbar{
+        background: url(images/menu_bg.gif);
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+    .nav{
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    .lists{
+        margin: 0px 10px;
+        padding: 5px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+        list-style: none;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .lists:hover{
+        background: grey;
+    }
+    .lists a{
+        color: rgb(223, 223, 223);
+        text-decoration: none;
+    }
+    .flex{
+        margin: 0%;
+        margin-top:30px;
+        display: flex;
+        flex-direction: row;  
+        align-items: center;
+        justify-content: space-around; 
+}
+.flex-one img{
+width:600px;
+height: auto;
+border: 4px solid rgb(106, 106, 106,0.1);
+}
+    .flex-two{
+        width: 500px;
+        height: 340px;
+        background: url(images/form_bg.jpg);
+        background-size: 670px;
+        background-repeat: no-repeat;
+        border: 4px solid rgb(106, 106, 106,0.1);
+    }
+    .question{
+        color: white;
+        font-size: 30px;
+        background-color: rgb(158, 0, 0);
+        font-weight: 700;
+        width: 42%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .case{
+        font-size: 20px;
+        margin: 0px;
+        margin-top: 0%;
+        margin-left: 66px;
+        font-weight: 700;
+    }
+    .case span{
+        font-size: 30px;
+        font-weight: 900;
+        color: rgb(0, 44, 102);
+    }
+    .both{
+        display: flex;
+        align-items: center;
+    }
+    .name{
+        display: flex;
+        margin: 0px;
+        margin-top: 4%;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+        height: 16px;
+    }
+    .name input{
+        margin-left: 3%;
+        width: 100%;
+    }
+    .email{
+        display: flex;
+        margin: 0px;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 4%;
+    }
+    .email input{
+        margin-left: 3%;
+        width: 100%;
+    }
+    .phone{
+        display: flex;
+        margin: 8px;
+        margin-left: -1px;
+        margin-bottom: 10px;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .phone input{
+        margin-left: 1%;
+    }
+    .row2{
+        display: flex;
+        flex-direction: row;
+    }
+    .form{
+        display: inline-block;
+        padding: 10px 10px;
+        justify-content: center;
+    }
+    .form input{
+        height: 20px;
+    }
+    .confedential{
+        margin-left: 6%;
+        margin-top: 3%;
+        rotate: 10deg;
+        border: solid rgba(#00000000);
+    }
+    .confedential img{
+        width: 150px;
+        height: 44px;
+    }
+    .p{
+        font-size: 17px;
+        word-spacing: 2px;
+        margin-left: 40px;
+        opacity: 0.7;
+    }
+    .more{
+        width:600px;
+        height: 60px;
+        margin: auto;
+        margin-left: 4%;
+        margin-top: -2%;
+        font-size: 14px;
+    }
+    .text{
+        width: 440px;
+        height: 70px;
+        background: rgb(255, 255, 255);
+        margin-left: 4%;
+        border: 2px solid rgb(255, 255, 255);
+    }
+    .text::placeholder{
+        font-weight: 700;
+        color: black;
+        opacity: 0.8;
+        font-size: 18px;
+        margin-top: -10%;
+        text-align: start;
+    }
+    .text:enabled{
+        padding-left: 2%;
+    }
+    .list{
+        display: flex;
+        align-items: center;
+        margin: 3%;
+        margin-top: 5%;
+    }
+    .privacy{
+        font-size: 12px;
+        opacity: 0.6;
+        font-style: italic;
+    }
+    .button{
+        margin-left: 27%;
+        display: flex;
+        width: 196px;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 600;
+        background: rgb(177, 0, 0);
+        padding: 8px;
+        flex-direction: row;
+        color: rgb(225, 225, 225);
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px -2px 10px 2px grey;
+    }
+    .button:hover{
+        text-decoration: underline;
+        transition: all 0.3s ease;
+    }
+    .button img{
+        margin-left: auto;
+    }
+    /* -------------------- */
+    /* Contain */
+    .contain{
+        display: flex;
+        align-items: center;
+        float: left;
+        justify-content: center;
+    }
+    .box-2{
+        padding:10px 30px;
+        margin-left: 0%;
+    }
+    .heading{
+        font-size: 28px;
+        font-weight: 600;
+        font-family: arial;
+    }
+    .heading span{
+        color: rgb(135, 0, 0);
+    }
+    .heading-two{
+        margin-top: 6px;
+        font-size: 20px;
+        color: rgb(135, 0, 0);
+        font-weight: 600;
+        opacity: 0.9;
+    }
+    .content-one{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .para{
+        max-width: 250px;
+        padding: 4px 20px 20px 0px;
+        font-size: 16px;
+    }
+    .content-one img{
+        width: 100px;
+        height: 130px;
+        opacity: 1;
+    }
+    .h{
+        width: 60%;
+        margin-left: auto;
+        margin-top: 10%;
+    }
+    .clickhere{
+        background: rgb(142, 0, 0);
+        border: none;
+        color: white;
+        padding: 2px 6px;
+        margin: auto;
+        margin-left: 60%;
+        box-shadow: 0px -2px 10px 2px grey;
+    }
+    .hehe{
+        padding: 10px;
+        width: 380px;
+        border-left: 1px solid rgb(176, 176, 176);
+        margin: 0px;
+    }
+    
+    .hehe{
+        padding:20px 60px;
+        border-bottom: 1px solid rgb(176, 176, 176);
+        border-right: 1px solid rgb(176, 176, 176);
+    }
+    .cli{
+        margin-left: auto;
+        margin-left: 22%;
+        width: 140px;
+        background: rgb(142, 0, 0);
+        border: none;
+        color: white;
+        cursor: pointer;
+        box-shadow: 0px -2px 10px 2px grey;
+    }
+    .cli:hover{
+        color: rgb(142, 0, 0);
+        background: white;
+        border:1px solid rgb(142,0,0);
+        transition: all 0.3s ease;
+    }
+    .hh{
+        width: 90%;
+        margin-right: auto;
+        margin-left: 1%;
+    }
+    .t{
+        font-size: 20px;
+        max-width: 200px;
+    }
+    .box-4{
+        border-left: 1px solid rgb(176, 176, 176);
+    }
+    .r{
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .lap{
+        width: 120%;
+        margin-top: 5%;
+    }
+    .f{
+        font-size: 16px;
+        max-width: 340px;
+    }
+    .box-two{
+        padding-left: 60px; /*--*/
+    }
+    .two{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .two img{
+        width: auto;
+    }
+    .imag{
+        margin-left: 4%;
+        height: 90px;
+    }
+    .sec{
+        height: 90px;
+    }
+    .certificates{
+        margin-left: 4%;
+        margin-top: 4%;
+        font-weight: 700;
+        opacity: 0.8;
+        max-width: 300px;
+        font-size: 26px;
+    }
+    .certificates span{
+        color: rgb(132, 0, 0);
+    }
+    .texte{
+        margin-left: 4%;
+        margin-top: 4%;
+        font-size: 18px;
+        max-width: 320px;
+    }
+    .c{
+        background: rgb(142, 0, 0);
+        border: none;
+        color: white;
+        padding: 6px 8px;
+        margin: auto;
+        margin-left: 44%;
+        width: 150px;
+        box-shadow: 0px -2px 10px 2px grey;
+    }
+    .c img{
+        margin-left: 6%;
+    }
+    .e{
+        margin-left:36%;
+    }
+    .line{
+        width:90%;
+        margin: auto;
+    }
+    .line img{
+        width: 100%;
+        height: 10px;
+    }
+    .container-all{
+        display:flex;
+        flex-direction: row;
+        margin: auto;
+        padding: 0% 4%;
+        margin-top: 2%;
+        justify-content: center;
+    }
+    .container-one,.container-two,.container-three{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .container-one{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 280px;
+    }
+    .h1{
+        font-size: 28px;
+        font-weight: 600;
+        color: rgb(41, 0, 69);
+        opacity: 0.8;
+    }
+    .h1 span{
+        color: rgb(117, 0, 0);
+    }
+    .dui{
+        display: flex;
+        padding: 10px;
+        background: grey;
+        text-align: center;
+        margin-top: 16px;
+        height: 50px;
+    }
+    .write{
+        width: 300px;
+    }
+    .imgred{
+        margin-left: -5%;
+        margin-top: -4%;
+    }
+    .imgred img{
+        height: 116%;
+        width: 200%;
+    }
+    .jjj{
+        margin-left:auto;
+    }
+    .write h3{
+        color: white;
+        width: 100%;
+        margin-left: -2%;
+    }
+    .d{
+        background: none;
+    }
+    .u{
+        text-align: center;
+        margin-top: 10%;
+    }
+    .h3{
+        color: rgb(41, 0, 69);
+    }
+    .h3 span{
+        color: rgb(143, 0, 0);
+    }
+    .box-u{
+        margin-top: 10%;
+    }
+    .u p{
+        margin-top: 3%;
+        opacity: 0.4;
+        font-weight: 700;
+    }
+    .container-two{
+        margin: 0% 2%;
+    }
+    .net img:hover{
+        width: 32px;
+        border: 3px solid black;
+        transition: all 0.1s ease;
+    }
+    .clickhere:hover{
+        color: rgb(142, 0, 0);
+        border: 1px solid rgb(142,0,0);
+        background: white;
+        cursor: pointer;
+    }
+    .c:hover{
+        color: rgb(142, 0, 0);
+        border: 1px solid rgb(142,0,0);
+        background: white;
+        cursor: pointer;
+    }
+    .box-u p:hover{
+        background: black;
+        color: white;
+        cursor: pointer;
+    }
+    .write button:hover{
+        background: grey;
+        height: 30px;
+    }
+/* -------------------------- */
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+    <div class="image">
+        <img src="images/logo.png" alt="images/logo.png"></div>
+        <div class="information">
+            <p class="first">CALL OUR OFFICES NOW!</p>
+            <img class="hr" src="images/lf_bt_hr_shadow.png" alt="images/lf_bt_hr_shadow.png">
+            <p class="second">540.433.6906</p>
+            <p class="third">Get Your Questions Answered Fast</p>
+</div>
+</div>
+</div>
+<div class="navbar">
+    <ul class="nav">
+        <li class="lists"><a href="#home" target="_blank">HOME</a></li>
+        <li class="lists"><a href="#biography" target="_blank">BIOGRAPHY</a></li>
+        <li class="lists"><a href="#blog" target="_blank">BLOG</a></li>
+        <li class="lists"><a href="#areasweserve" target="_blank">AREAS <span>WE SERVE</span></a></li>
+        <li class="lists"><a href="#library" target="_blank">LIBRARY</a></li>
+        <li class="lists"><a href="#contact" target="_blank">CONTACT</a></li>
+    </ul>
+</div>
+<div class="flex">
+    <div class="flex-one">
+        <img src="images/gurantee_banner.gif" alt="images/gurantee_banner.gif">
+    </div>
+    <div class="flex-two">
+        <div class="row2">
+        <div class="question">QUESTIONS&#63;</div>
+        <div class="case">Have a <span>Question</span><br>About Your Case&#63;</div></div>
+        <div class="p">Enter your information and get your questions answered <br> quickly and discreetly or call us at: <b>540.433.6906</b></div>
+        <div class="both">
+        <div class="form">
+            <div class="name"><p>Name:</p><input type="text" id="name"></div>
+            <div class="email"><p>Email:</p><input type="text" id="email"></div>
+            <div class="phone"><p>Phone:</p><input type="text" id="phone"></div>
+</div>
+<div class="confedential"><img src="images/confidential.png" alt="images/confidential.png"></div>
+</div>
+<textarea class="text" placeholder="Tell us about your case here..." style = "width: 87%; height:60px; direction: ltr; unicode-bidi: bidi-override;text-align:left;resize: none;"required></textarea>
+
+<div class="list">
+<p class="privacy">100&#37; Privacy Guaranteed</p>
+<button class="button">
+    <p class="btn-play">Ask Us About Your Case</p>
+    <img src="images/bullet_white_lrg.png" alt="images/bullet_white_lrg.png">
+</button></div>
+</div>
+    </div>
+</div>
+<!--  -->
+<!-- Details -->
+<div class="cont">
+<div class="contain">
+    <div class="box-2">
+    <p class="heading">CHARGED WITH <span>DUI&#63;</span></p>
+    <p class="heading-two">FREE CASE EVALUATION</p>
+    <div class="content-one">
+        <p class="para">Being charged with a DUI can be scary. Get the help you deserve. <br><br>Click here to let us know how we can help you with your case.</p>
+        <img src="images/paste_board.gif" alt="images/paste_board.gif"></div>
+    </p>
+    <hr class="h">
+<button class="clickhere">CLICK HERE <img src="images/bullet_white_lrg.png" alt="images/bullet_white_lrg.png"></button>
+</div>
+<div style="display: flex;flex-direction: column;">
+    <div class="hehe" style="display: flex;">
+<div class="box-3">
+    <div class="heading-6 r">LAW <span style="color: rgb(143, 0, 0); font-weight: 600;">BLOG</span></div>
+    <p class="para t">Learn more about Virginia Traffic Laws.
+        <hr class="h hh">
+<button class="cli">CLICK HERE <img src="images/bullet_white_lrg.png" alt="images/bullet_white_lrg.png"></button>
+    </p>
+</div>
+<div class="i"><img class="lap" src="images/pic1.gif" alt="images/pic1.gif"></div>
+</div>
+<div class="box-4"><div class="hehe" style="display: flex;border-left: none;border-bottom: none;margin: 0;">
+    <div class="box-3">
+        <div class="heading-6 r">CASE<span style="color: rgb(143, 0, 0); font-weight: 600;"> RESULTS</span></div>
+        <p class="para t f">See how we help our clients. <br>Read our latest case results.
+            <hr class="h hh">
+    <button class="cli">CLICK HERE <img src="images/bullet_white_lrg.png" alt="images/bullet_white_lrg.png"></button>
+        </p>
+    </div>
+    <div class="i"><img class="lap" src="images/order_icon.gif" alt="images/order_icon.gif"></div></div>
+    
+</div>
+</div>
+<div class="box-two">
+<div class="two">
+    <img class="sec" src="images/avo_rating_large.gif" alt="images/avo_rating_large.gif">
+    <img class="imag" src="images/national_college_small.gif" alt="images/national_college_small.gif">
+</div>
+<p class="certificates">CERTIFICATES & <span>CREDENTIALS</span></p>
+<p class="texte">Keefer Law Firm has protected the rights of Virginians for over 30 years.</p>
+<hr class="h e">
+<button class="c">LEARN MORE<img src="images/bullet_white_lrg.png" alt="images/bullet_white_lrg.png"></button>
+</div></div>
+</div>
+</div>
+<div class="line"><img src="images/lf_bt_hr_shadow.png" alt="images/lf_bt_hr_shadow.png"></div>
+<div class="container-all">
+<div class="container-one">
+    <p class="h1">PRACTICE <span>AREAS</span></p>
+    <div class="dui">
+        <div class="imgred"><img src="images/menu_bg.gif" alt="images/menu_bg.gif"></div>
+    <div class="write">
+        <h3 style="margin-left: -24%;">DUI & DWI</h3>
+        <button class="c d">LEARN MORE<img src="images/bullet_red.gif" alt="images/bullet_red.gif"></button>
+    </div>
+    </div>
+    <div class="dui">
+        <div class="imgred"><img src="images/menu_bg.gif" alt="images/menu_bg.gif"></div>
+    <div class="write">
+        <h3>RECKLESS DRIVING</h3>
+        <button class="c d">LEARN MORE<img src="images/bullet_red.gif" alt="images/bullet_red.gif"></button>
+    </div>
+    </div>
+    <div class="dui">
+        <div class="imgred"><img src="images/menu_bg.gif" alt="images/menu_bg.gif"></div>
+    <div class="write">
+        <h3>SPEEDING TICKETS</h3>
+        <button class="c d">LEARN MORE<img src="images/bullet_red.gif" alt="images/bullet_red.gif"></button>
+    </div>
+    </div>
+    <div class="dui">
+        <div class="imgred"><img src="images/menu_bg.gif" alt="images/menu_bg.gif"></div>
+    <div class="write">
+        <h3 style="margin-left: 1%;">TRAFFIC VIOLATIONS</h3>
+        <button class="c d">LEARN MORE<img src="images/bullet_red.gif" alt="images/bullet_red.gif"></button>
+    </div>
+    </div>
+    <div class="u"><h3 class="h3">LEARN <span>MORE </span>ABOUT</h3>
+    <div class="box-u">
+        <p>MENU</p>
+        <p>AREA</p>
+        <p>HERE</p>
+    </div>
+</div>
+</div>
+<div class="container-two">
+    <style>
+        .container-two h2{
+            word-spacing: 10px;
+        }
+    </style>
+    <div style="display:flex;"><h2>&lt;H1&gt;</h2><h2 style="font-family: 'Vollkorn', serif;">PAGE TITLE HERE</h2></div>
+    <p class="ccc" style="font-size: 18px; line-height: 26px; margin-top: 3%;">Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur. <br> Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident , sunt in anim id est laborum.</p>
+</div>
+<div class="column">
+<div class="box-3">
+    <div class="heading-6 r">CLIENT <span style="color: rgb(143, 0, 0); font-weight: 600;">TESTIMONIALS</span></div>
+    <p class="para t" style="font-size: 17px; width: 200px;">Read what others say about Keefer Law Firm.
+        <hr class="h hh" style="margin-top: -4%;">
+<button class="cli">CLICK HERE <img src="images/bullet_white_lrg.png" alt="images/bullet_white_lrg.png"></button>
+    </p>
+</div>
+<br><br>
+<div class="box-3" style="margin-top: -4%;">
+    <div class="heading-6 r">DOWNLOAD <span style="color: rgb(143, 0, 0); font-weight: 600;"><br>FREE</span> REPORTS</div>
+    <p class="para t" style="font-size: 17px; width: 200px;">Discover the truth about Virginia Law.
+        <hr class="h hh" style="margin-top: -4%;">
+<button class="cli">CLICK HERE <img src="images/bullet_white_lrg.png" alt="images/bullet_white_lrg.png"></button>
+    </p>
+</div>
+<br><br>
+<div class="box-3">
+    <div class="heading-6 r">CONTACT <span style="color: rgb(143, 0, 0); font-weight: 600;">OUR</span> OFFICES</div>
+    <p class="para t" style="font-size: 17px; width: 200px;">Get your questions answered right now.
+        <hr class="h hh" style="margin-top: -4%;">
+<button class="cli">CLICK HERE <img src="images/bullet_white_lrg.png" alt="images/bullet_white_lrg.png"></button>
+    </p>
+</div>
+<a href="images/avo_rating_large.gif" target="_blank"><img style="margin: auto;display: flex;margin-top: 10%;" src="images/avo_rating_large.gif" alt="images/avo_rating_large.gif"></a>
+<a href="images/national_college_small.gif" target="_blank"><img style="margin: auto;display: flex;margin-top: 10%;" src="images/national_college_small.gif" alt="images/national_college_small.gif"></a>
+<div class="heading-6 r" style="color: rgb(18, 0, 56);text-align: center;margin-top: 14%;">FOLLOW <span style="color: rgb(143, 0, 0); font-weight: 600;">US</span></div>
+<img class="src" src="images/lf_bt_hr_shadow.png" alt="images/lf_bt_hr_shadow.png">
+<div class="net" style="margin: auto;">
+    <a href="https://www.facebook.com/KeeferLawFirm/" target="_blank"><img style="margin-left: 2%;" src="images/fb_icon.gif" alt="images/fb_icon.gif"></a>
+    <a href="" target="_blank"><img style="margin-left: 10%;" src="images/google_icon.gif" alt="images/google_icon.gif"></a>
+    <a href="https://twitter.com/kieferkieferlaw?lang=en" target="_blank"><img style="margin-left: 10%;" src="images/twitter_icon.gif" alt="images/twitter_icon.gif"></a>
+    <a href="https://www.linkedin.com/company/kiefer-kiefer-attorneys-at-law/" target="_blank"><img style="margin-left: 10%;" src="images/linked_icon.gif" alt="images/linked_icon.gif"></a>
+</div>
+<br><br><br>
+</div>
+</div>
+</div>
+<!--  -->
+<style>
+    @media(min-width:1150px){
+        .flex-one img{
+            width: 640px;
+            height: 408px;
+            margin-left: 10px;
+        }
+        .flex-two{
+            width: 640px;
+        height: 408px;
+        background: url(images/form_bg.jpg);
+        background-size: 640px;
+        background-repeat: no-repeat;
+        margin-left: -20px;
+        }
+        .question{
+        color: white;
+        font-size: 30px;
+        background-color: rgb(158, 0, 0);
+        font-weight: 700;
+        width: 42%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .p{
+        font-size: 19px;
+    }
+    .name input{
+        width:320px;
+    }
+    .email input{
+        width:320px;
+    }
+    .phone input{
+        width:330px;
+    }
+    .confedential{
+        margin-left: 0%;
+    }
+    .confedential img{
+        width: 190px;
+    }
+    .button{
+        margin-left: 38%;
+        margin-top: -3%;
+    }
+    .privacy{
+        margin-top: -3%;
+    }
+    .nav{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    .container-all{
+        margin: auto;
+        margin-top: 40px;
+    }
+    .container-one{
+        margin-left: -10px;
+    }
+    .box-3{
+        margin-right: -46px;
+    }
+    .information{
+        margin-right: 28px;
+    }
+    .i{
+        margin-left: 20px;
+    }
+    .privacy{
+        margin-left: 6px;
+    }
+    .button{
+        margin-left: 240px;
+    }
+    }
+    @media(max-width:1000px){
+        body{
+            overflow-x: hidden;
+        }
+        .flex{
+            display: flex;
+            flex-direction: column;
+        }
+        .image img{
+            margin-right: auto;
+        }
+        .information{
+            margin-left: auto;
+        }
+        .first{
+        font-size:10px;
+        margin-left: auto;
+    }
+    .hr{
+        height: 4px;
+        width: 80%;
+        margin-left: auto;
+    }
+    .second{
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: auto;
+        opacity: 0.8;
+    }
+    .third{
+        font-size: 6px;
+        font-weight: 700;
+        opacity: 0.6;
+    }
+    .lists{
+        width: 100%;
+    }
+    .lists span{
+        display: none;
+    }
+    .flex-one img{
+        margin: auto;
+    }
+    .contain{
+        display: flex;
+        flex-direction: column;
+    }
+    .image img{
+        width: 100%;
+        height:130px;
+        float: left;
+    }
+    .confedential{
+        margin-left: 16%;
+    }
+
+    .name input{
+        width: 100%;
+    }
+    .button{
+        margin-left: 34%;
+    }
+    .p{
+        font-size: 19.3px;
+    }
+    .container-all{
+        display: flex;
+        flex-direction: column;
+    }
+    .name input{
+        width: 300px;
+    }
+    .email input{
+        width: 300px;
+    }
+    .phone input{
+        width: 305px;
+    }
+    .confedential{
+        margin-left: 2%;
+    }
+    }
+    @media(min-width:50px) and (max-width:800px){
+        .container{
+            width:750px;
+        }
+        .navbar{
+            width: 750px;
+        }
+        .nav{
+            margin: auto;
+        }
+        .lists span{
+            display: none;
+        }
+        .flex{
+            width: 615px;
+        }
+        .flex-one{
+            margin-left: auto;
+            padding-left: 5%;
+        }
+        .flex-one img{
+            width: 708px;
+            height: 408px;
+            margin: auto;
+        }
+        .flex-two{
+            width: 708px;
+            height: 408px;
+            background-size: 100%;
+            margin-left: 24%;
+        }
+        .confedential img{
+            width: 120px;
+            margin-left: 20%;
+        }
+        .name input{
+            width: 350px;
+        }
+        .email input{
+            width: 350px;
+        }
+        .phone input{
+            width: 360px;
+            margin-top: 6px;
+        }
+        .button{
+            margin-left: 114px;
+        }
+        .cont{
+            width: 750px;
+        }
+    .container-all{
+        width: 700px;
+    }
+    .container-one{
+        margin: auto;
+    }
+    .line{
+        width: 780px;
+        margin: auto;
+    }
+    .container-two{
+        width: auto;
+        margin: auto;
+        text-align: justify;
+    }
+    .column{
+        margin-top: 10%;
+        margin: auto;
+    }
+    .box-3{
+        margin: auto;
+    }
+    .button{
+        width:300px;
+    }
+    .src{
+        width:300px;
+    }
+    .container-two{
+        margin: auto;
+    }
+    .ccc{
+        width: 400px;
+    }
+    }
+    
+    @media(max-width:1100px){
+        .column{
+        margin-top: 10%;
+        margin: auto;
+    }
+    .box-3{
+        margin: auto;
+    }
+    .container-all{
+        width: 700px;
+    }
+    .container-one{
+        margin: auto;
+    }
+    .confedential{
+        margin-left: 0%;
+    }
+    .flex-two{
+        height: auto;
+    }
+    .container{
+        width: 780px;
+    }
+    .navbar{
+        width: 780px;
+    }
+    }
+    @media(width:820px){
+        .flex-two{
+            width: 600px;
+            height: auto;
+        }
+    }
+    @media(width:1024px){
+        .container{
+            width:1050px;
+        }
+        .navbar{
+            width:1070px;
+        }
+    }
+    @media(width:1280px){
+        .flex-two{
+        width:500px;
+    }
+    .name input{
+        width:220px;
+    }
+    .email input{
+        width:220px;
+    }
+    .phone input{
+        width:224px;
+    }
+    .text{
+        width: 420px;
+    }
+    .button{
+        width:300px;
+    }
+    }
+    @media(min-width:800px)and (max-width:1000px){
+        .container{
+            width:1200px;
+        }
+        .lists span{
+            display: none;
+        }
+        .navbar{
+            width:1200px;
+        }
+        .nav{
+            margin: auto;
+        }
+        .flex{
+            width: 1200px;
+        }
+        .flex-one img{
+            width: 850px;
+        }
+        .flex-two{
+            width:850px;
+            background-size: 850px;
+            height: 542px;
+        }
+        .question{
+            width: 400px;
+            font-size: 40px;
+        }
+        .case{
+            font-size: 28px;
+        }
+        .case span{
+            font-size: 46px;
+        }
+        .p{
+            font-size: 28px;
+        }
+        .name{
+            font-size: 30px;
+        }
+        .name input{
+            height: 30px;
+            width: 400px;
+        }
+        .email{
+            font-size: 30px;
+        }
+        .email input{
+            height: 30px;
+            width: 400px;
+        }
+        .phone{
+            font-size: 30px;
+        }
+        .phone input{
+            height: 30px;
+            width: 404px;
+        }
+        .confedential img{
+            width: 250px;
+            height: 50px;
+        }
+        .text{
+           margin-top: 20px; 
+           margin-left: 50px;
+        }
+        .button{
+            margin-left: 320px;
+            width: 300px;
+            font-size: 22px;
+        }
+        .src{
+            width: 300px;
+            margin: auto;
+        }
+        .cont{
+            width: 1100px;
+            margin: auto;
+        }
+        .container-all{
+            width: 1100px;
+            margin: auto;
+        }
+        .line{
+            width: 1100px;
+            margin: auto;
+        }
+    }
+    @media(min-width:1000px)and (max-width:1100px){
+        .container{
+            width:1150px;
+        }
+        .navbar{
+            width:1160px;
+        }
+        .nav{
+            margin: auto;
+        }
+        .flex{
+            width:1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        .flex-two{
+            width:700px;
+        }
+        .lists span{
+            display: none;
+        }
+    }
+    @media(width:820px){
+        .container{
+            width: 1100px;
+        }
+        .navbar{
+            width: 1100px;
+        }
+        .nav{
+            margin-left: 360px;
+        }
+        .container-all{
+            width: 1030px;
+            margin: auto;
+        }
+        .cont{
+            width: 1030px;
+            margin: auto;
+        }
+    }
+    @media(min-width:1800px){
+        .flex-one img{
+            width: 900px;
+        }
+        .flex-two{
+            width: 900px;
+            background-size: 900px;
+        }
+        .question{
+            width: 400px;
+            font-size: 40px;
+        }
+        .case{
+            font-size: 32px;
+        }
+        .case span{
+            font-size: 42px;
+        }
+        .p{
+            font-size: 28px;
+        }
+        .name{
+            font-size: 30px;
+            margin-top: 0px;
+        }
+        .name input{
+            height: 30px;
+            width: 450px;
+        }
+        .email{
+            font-size: 30px;
+        }
+        .email input{
+            height: 30px;
+            width: 450px;
+        }
+        .phone{
+            font-size: 30px;
+        }
+        .phone input{
+            height: 30px;
+            width: 460px;
+        }
+        .confedential img{
+            width: 250px;
+            height: 60px;
+        }
+        .button{
+            margin-left: 474px;
+            margin-top: -60px;
+        }
+        .privacy{
+            margin-top: -60px;
+        }
+        .container-all{
+            margin-top: 50px;
+        }
+       .box-2{
+        margin-left: -100px;
+        padding: 0px 50px;
+        padding-left: 200px;
+        padding-right: 100px;
+       }
+       .hehe{
+        padding: 0px 100px 0px 100px;
+       }
+       .box-two{
+        margin-left: 100px;
+        padding: 0px 100px;
+       }
+       .contain{
+        margin-top: 40px;
+       }
+    }
+</style>
+</body>
+</html>
