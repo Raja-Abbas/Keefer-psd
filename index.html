@@ -684,7 +684,7 @@ border: 4px solid rgb(106, 106, 106,0.1);
     <p class="ccc" style="font-size: 18px; line-height: 26px; margin-top: 3%;">Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur. <br> Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident , sunt in anim id est laborum.</p>
 </div>
 <div class="column">
-<div class="box-3">
+<div class="box-3 hg">
     <div class="heading-6 r">CLIENT <span style="color: rgb(143, 0, 0); font-weight: 600;">TESTIMONIALS</span></div>
     <p class="para t" style="font-size: 17px; width: 200px;">Read what others say about Keefer Law Firm.
         <hr class="h hh" style="margin-top: -4%;">
@@ -692,7 +692,7 @@ border: 4px solid rgb(106, 106, 106,0.1);
     </p>
 </div>
 <br><br>
-<div class="box-3" style="margin-top: -4%;">
+<div class="box-3 hg" style="margin-top: -4%;">
     <div class="heading-6 r">DOWNLOAD <span style="color: rgb(143, 0, 0); font-weight: 600;"><br>FREE</span> REPORTS</div>
     <p class="para t" style="font-size: 17px; width: 200px;">Discover the truth about Virginia Law.
         <hr class="h hh" style="margin-top: -4%;">
@@ -700,13 +700,14 @@ border: 4px solid rgb(106, 106, 106,0.1);
     </p>
 </div>
 <br><br>
-<div class="box-3">
+<div class="box-3 hg">
     <div class="heading-6 r">CONTACT <span style="color: rgb(143, 0, 0); font-weight: 600;">OUR</span> OFFICES</div>
     <p class="para t" style="font-size: 17px; width: 200px;">Get your questions answered right now.
         <hr class="h hh" style="margin-top: -4%;">
 <button class="cli">CLICK HERE <img src="images/bullet_white_lrg.png" alt="images/bullet_white_lrg.png"></button>
     </p>
 </div>
+<div class="sss">
 <a href="images/avo_rating_large.gif" target="_blank"><img style="margin: auto;display: flex;margin-top: 10%;" src="images/avo_rating_large.gif" alt="images/avo_rating_large.gif"></a>
 <a href="images/national_college_small.gif" target="_blank"><img style="margin: auto;display: flex;margin-top: 10%;" src="images/national_college_small.gif" alt="images/national_college_small.gif"></a>
 <div class="heading-6 r" style="color: rgb(18, 0, 56);text-align: center;margin-top: 14%;">FOLLOW <span style="color: rgb(143, 0, 0); font-weight: 600;">US</span></div>
@@ -715,7 +716,7 @@ border: 4px solid rgb(106, 106, 106,0.1);
     <a href="https://www.facebook.com/KeeferLawFirm/" target="_blank"><img style="margin-left: 2%;" src="images/fb_icon.gif" alt="images/fb_icon.gif"></a>
     <a href="" target="_blank"><img style="margin-left: 10%;" src="images/google_icon.gif" alt="images/google_icon.gif"></a>
     <a href="https://twitter.com/kieferkieferlaw?lang=en" target="_blank"><img style="margin-left: 10%;" src="images/twitter_icon.gif" alt="images/twitter_icon.gif"></a>
-    <a href="https://www.linkedin.com/company/kiefer-kiefer-attorneys-at-law/" target="_blank"><img style="margin-left: 10%;" src="images/linked_icon.gif" alt="images/linked_icon.gif"></a>
+    <a href="https://www.linkedin.com/company/kiefer-kiefer-attorneys-at-law/" target="_blank"><img style="margin-left: 10%;" src="images/linked_icon.gif" alt="images/linked_icon.gif"></a></div>
 </div>
 <br><br><br>
 </div>
@@ -1161,12 +1162,21 @@ border: 4px solid rgb(106, 106, 106,0.1);
         }
     }
     @media(min-width:1800px){
+        body{
+            overflow-x: hidden;
+        }
+        .flex{
+            margin: auto;
+            justify-content: space-evenly;
+        }
         .flex-one img{
-            width: 900px;
+            width: 950px;
+            margin-left: 0;
         }
         .flex-two{
-            width: 900px;
-            background-size: 900px;
+            width: 950px;
+            background-size: 950px;
+            margin-left: 10px;
         }
         .question{
             width: 400px;
@@ -1174,12 +1184,13 @@ border: 4px solid rgb(106, 106, 106,0.1);
         }
         .case{
             font-size: 32px;
+            margin-left: 150px;
         }
         .case span{
             font-size: 42px;
         }
         .p{
-            font-size: 28px;
+            font-size: 32px;
         }
         .name{
             font-size: 30px;
@@ -1187,29 +1198,37 @@ border: 4px solid rgb(106, 106, 106,0.1);
         }
         .name input{
             height: 30px;
-            width: 450px;
+            width: 500px;
         }
         .email{
             font-size: 30px;
         }
         .email input{
             height: 30px;
-            width: 450px;
+            width: 500px;
+            margin-top: -10px;
         }
         .phone{
             font-size: 30px;
         }
         .phone input{
             height: 30px;
-            width: 460px;
+            width: 510px;
+        }
+        .confedential{
+            margin-top: -20px;
         }
         .confedential img{
             width: 250px;
-            height: 60px;
+            height: 70px;
+        }
+        .text{
+            margin-top: -10px;
+            height: 20px;
         }
         .button{
-            margin-left: 474px;
-            margin-top: -60px;
+            margin-left: 520px;
+            margin-top: -64px;
         }
         .privacy{
             margin-top: -60px;
@@ -1227,13 +1246,118 @@ border: 4px solid rgb(106, 106, 106,0.1);
         padding: 0px 100px 0px 100px;
        }
        .box-two{
-        margin-left: 100px;
+        margin-left: 150px;
         padding: 0px 100px;
        }
        .contain{
         margin-top: 40px;
        }
+    .heading{
+        font-size: 38px;
+        font-weight: 700;
     }
+    .heading-two{
+        margin-top: 6px;
+        font-size: 26px;
+    }
+    .para{
+        max-width: 250px;
+        padding: 4px 20px 20px 0px;
+        font-size: 24px;
+    }
+    .content-one img{
+        width: 150px;
+        height: 180px;
+    }
+    .hehe{
+        padding: 10px;
+        width: 600px;
+        margin:0px 0px;
+    }
+    .r{
+        font-size: 38px;
+        font-weight: 700;
+    }
+    .lap{
+        width: 150%;
+        margin-top: 5%;
+    }
+    .f{
+        font-size: 24px;
+        max-width: 340px;
+    }
+    .box-two{
+        padding-left: 60px; 
+    }
+    .box-3{
+        margin-left: 100px;
+    }
+    .two{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .two img{
+        height: 120px;
+    }
+    .imag{
+        margin-left: 4%;
+        height: 120px;
+    }
+    .sec{
+        height: 90px;
+    }
+    .certificates{
+        margin-left: 0%;
+        margin-top: 4%;
+        font-weight: 700;
+        opacity: 0.8;
+        max-width:360px;
+        font-size: 38px;
+    }
+    .certificates span{
+        color: rgb(132, 0, 0);
+    }
+    .texte{
+        font-size: 24px;
+    }
+    .line img{
+        height: 16px;
+    }
+    .h1{
+        font-size: 30px;
+    }
+    .write h3{
+        color: white;
+        width: 100%;
+        margin-left: -2%;
+    }wid
+    .column{
+        margin-left: -200px;
+    }
+    .ccc{
+        width: 64%;
+    }
+    .container-one{
+        margin-left: 60px;
+    }
+    .container-two{
+        margin-top: 10px;
+    }
+    .hg{
+        margin-left: -360px;
+        width: 300px;
+    }
+    .sss{
+        margin-left: -400px;
+    }
+    .src{
+        width: 100%;
+    }
+    .net a{
+        margin-left: 30px;
+    }
+}
 </style>
 </body>
 </html>
