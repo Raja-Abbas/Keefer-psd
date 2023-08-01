@@ -209,8 +209,7 @@ border: 4px solid rgb(106, 106, 106,0.1);
         font-size: 14px;
     }
     .text{
-        width: 440px;
-        height: 70px;
+        width: 87%; height:60px;
         background: rgb(255, 255, 255);
         margin-left: 4%;
         border: 2px solid rgb(255, 255, 255);
@@ -574,7 +573,7 @@ border: 4px solid rgb(106, 106, 106,0.1);
 </div>
 <div class="confedential"><img src="images/confidential.png" alt="images/confidential.png"></div>
 </div>
-<textarea class="text" placeholder="Tell us about your case here..." style = "width: 87%; height:60px; direction: ltr; unicode-bidi: bidi-override;text-align:left;resize: none;"required></textarea>
+<textarea class="text" placeholder="Tell us about your case here..." style = " direction: ltr; unicode-bidi: bidi-override;text-align:left;resize: none;"required></textarea>
 
 <div class="list">
 <p class="privacy">100&#37; Privacy Guaranteed</p>
@@ -1165,6 +1164,9 @@ border: 4px solid rgb(106, 106, 106,0.1);
         body{
             overflow-x: hidden;
         }
+        .header{
+            width: 100%;
+        }
         .flex{
             margin: auto;
             justify-content: space-evenly;
@@ -1357,6 +1359,82 @@ border: 4px solid rgb(106, 106, 106,0.1);
     .net a{
         margin-left: 30px;
     }
+}
+@media(min-width:2000px){
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        max-width:auto;
+        min-width: 108%;
+    }
+    .information{
+        margin-left: auto;
+    }
+    .navbar{
+        width: 108%;
+    }
+    .flex{
+        width: 108%;
+        margin: auto;
+    }
+    .flex-one img{
+        width: 1000px;
+        height: 800px;
+    }
+    .flex-two{
+        width: 1000px;
+        height: 800px;
+        background-size: 1000px 800px;
+    }
+    .question{
+        font-size: 60px;
+    }
+    .case{
+        font-size: 40px;
+    }
+    .case span{
+        font-size: 60px;
+    }
+    .p{
+        font-size: 36px;
+    }
+    .name{
+        font-size: 40px;
+        margin-top: 20px;
+    }
+    .name input{
+        height: 40px;
+    }
+    .email{
+        font-size: 40px;
+        margin-top: 40px;
+    }
+    .email input{
+        height: 40px;
+    }
+    .phone{
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    .phone input{
+        height: 40px;
+        }
+    .text{
+        width: 900px;
+        height: 250px;
+        margin-top: 20px;
+        }
+    .text::placeholder{
+        font-size: 28px;
+    }
+    .button{
+        margin-top: 0px;
+        margin-left: auto;
+      }
+    .privacy{
+        margin-top: 0px;
+      }
 }
 </style>
 </body>
